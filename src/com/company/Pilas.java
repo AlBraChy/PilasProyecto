@@ -7,15 +7,15 @@ public class Pilas {
 
     private Nodo top;
 
-    public Pilas(){
+    public Pilas() {
         top = null;
     }
 
-    public Boolean vacia(){
-        return (top==null);
+    public Boolean vacia() {
+        return (top == null);
     }
 
-    public void push(int valor){//insertar
+    public void push(int valor) {//insertar
         Nodo nuevoNodo;
         if (vacia())
             top = new Nodo(valor);
@@ -26,32 +26,84 @@ public class Pilas {
         }
     }
 
-    public void peek(){//mostrar
+    public void peek() {//mostrar
         Nodo temp = top;
-        if (temp!=null){
+        if (temp != null) {
             System.out.println("La pila es: ");
-            while (temp!=null){
+            while (temp != null) {
                 System.out.println(temp.getValor());
-                temp=temp.getProx();
+                temp = temp.getProx();
             }
-        }
-        else
+        } else
             System.out.println("Pila vacía.");
     }
 
-    public void cima(){//buscar
+    public void cima() {//buscar
         if (!vacia())
-            System.out.println("Cima: "+top.getValor());
+            System.out.println("Cima: " + top.getValor());
         else
             System.out.println("La pila esta vacía.");
     }
 
-    public void pop(){//extraer
-        if (!vacia()){
-            System.out.println("Dato extraido: "+top.getValor());
+    public void pop() {//extraer
+        if (!vacia()) {
+            System.out.println("Dato extraido: " + top.getValor());
             top = top.getProx();
-        }
-        else
+        } else
             System.out.println("La pila esta vacía.");
     }
+
+<<<<<<< HEAD
+    public int getTamaño(){
+
+        Nodo temp = null;
+        int i=0;
+        temp = top;
+        while (temp!=null){
+            temp=temp.prox;
+            i++;
+        } return i;
+    }
+
+    public int buscarv(int vslor){//buscar valor
+        Nodo temp = top;
+        int tama = getTamaño();
+        int c = 0;
+        while (c <= tama && temp!=null){
+            Integer val = (Integer)temp.valor;
+            if (val==vslor){
+                return c;
+            } c ++;
+            temp= temp.getProx();
+        } return c;
+    }
 }
+=======
+    public int getTamaño() {
+
+        Nodo temp = null;
+        int i = 0;
+        temp = top;
+        while (temp != null) {
+            temp = temp.prox;
+            i++;
+        }
+        return i;
+    }
+
+    public int buscarv(int vslor) {//buscar valor
+        Nodo temp = top;
+        int tama = getTamaño();
+        int c = 0;
+        while (c <= tama && temp != null) {
+            Integer val = (Integer) temp.valor;
+            if (val == vslor) {
+                return c;
+            }
+            c++;
+            temp = temp.getProx();
+        }
+        return c;
+    }
+}
+>>>>>>> origin/Desarrollo1
