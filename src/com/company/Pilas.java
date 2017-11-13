@@ -53,33 +53,6 @@ public class Pilas {
             System.out.println("La pila esta vacía.");
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public int getTamaño(){
-
-        Nodo temp = null;
-        int i=0;
-        temp = top;
-        while (temp!=null){
-            temp=temp.prox;
-            i++;
-        } return i;
-    }
-
-    public int buscarv(int vslor){//buscar valor
-        Nodo temp = top;
-        int tama = getTamaño();
-        int c = 0;
-        while (c <= tama && temp!=null){
-            Integer val = (Integer)temp.valor;
-            if (val==vslor){
-                return c;
-            } c ++;
-            temp= temp.getProx();
-        } return c;
-    }
-}
-=======
     public int getTamaño() {
 
         Nodo temp = null;
@@ -106,9 +79,8 @@ public class Pilas {
         }
         return c;
     }
-}
->>>>>>> origin/Desarrollo1
-=======
+
+
     public void Maximo() {
         Nodo temp1 = this.top;
         int Max = temp1.getValor();
@@ -153,4 +125,4 @@ public class Pilas {
 
     }
 }
->>>>>>> origin/Desarrollador2
+
