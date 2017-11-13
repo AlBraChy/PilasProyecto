@@ -54,4 +54,28 @@ public class Pilas {
         else
             System.out.println("La pila esta vacía.");
     }
+
+    public int getTamaño(){
+
+        Nodo temp = null;
+        int i=0;
+        temp = top;
+        while (temp!=null){
+            temp=temp.prox;
+            i++;
+        } return i;
+    }
+
+    public int buscarv(int vslor){//buscar valor
+        Nodo temp = top;
+        int tama = getTamaño();
+        int c = 0;
+        while (c <= tama && temp!=null){
+            Integer val = (Integer)temp.valor;
+            if (val==vslor){
+                return c;
+            } c ++;
+            temp= temp.getProx();
+        } return c;
+    }
 }
