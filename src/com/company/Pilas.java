@@ -54,6 +54,7 @@ public class Pilas {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public int getTamaño(){
 
         Nodo temp = null;
@@ -107,3 +108,49 @@ public class Pilas {
     }
 }
 >>>>>>> origin/Desarrollo1
+=======
+    public void Maximo() {
+        Nodo temp1 = this.top;
+        int Max = temp1.getValor();
+        if(temp1 == null) {
+            System.out.println("La pila esta vacia");
+        } else {
+            while(true) {
+                if(temp1 == null) {
+                    System.out.println("El maximo es:" + Max);
+                    break;
+                }
+
+                if(Max < temp1.getValor()) {
+                    Max = temp1.getValor();
+                }
+
+                temp1 = temp1.getProx();
+            }
+        }
+
+    }
+
+    public void Minimo() {
+        Nodo temp = this.top;
+        int Min = temp.getValor();
+        if(temp == null) {
+            System.out.println("La pila esta vacia");
+        } else {
+            while(true) {
+                if(temp == null) {
+                    System.out.println("El minimo es:" + Min);
+                    break;
+                }
+
+                if(Min > temp.getValor()) {
+                    Min = temp.getValor();
+                }
+
+                temp = temp.getProx();
+            }
+        }
+
+    }
+}
+>>>>>>> origin/Desarrollador2
